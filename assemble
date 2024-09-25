@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Este script se ejecutará durante el proceso de construcción S2I
+# Asegurarse de que `pip` esté actualizado
+echo "Actualizando pip a la última versión..."
+python -m pip install --upgrade pip
+
+# Instalar las dependencias de requirements.txt en el directorio del usuario
+echo "Instalando dependencias..."
+pip install --user -r requirements.txt
+
+# Agregar otros pasos personalizados si es necesario
